@@ -1,9 +1,0 @@
-LICENSE
-README.md
-setup.py
-escort/__init__.py
-escort/kernel.py
-escort.egg-info/PKG-INFO
-escort.egg-info/SOURCES.txt
-escort.egg-info/dependency_links.txt
-escort.egg-info/top_level.txt
