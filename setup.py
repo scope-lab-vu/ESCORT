@@ -1,8 +1,9 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
-setup(
-    name="escort",
-    version="1.0",
-    packages=find_packages(),
-)
+def main() -> None:
+    setup()
+
+
+if __name__ == "__main__":
+    main()

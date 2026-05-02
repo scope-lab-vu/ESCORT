@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=82.0"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "escort"
+version = "1.1.0"
+description = "ESCORT: Efficient Stein-variational and Sliced Consistency-Optimized Temporal Belief Representation for POMDPs"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pip>=26.1",
+    "numpy>=2.4",
+    "torch>=2.11",
+]
+
+
+[tool.mypy]
+strict = true
+
+
+[[tool.mypy.overrides]]
+module = [
+    "gymnasium.*",
+    "numpy.*",
+    "torch.*"
+]
+ignore_missing_imports = true
+
+
+[tool.setuptools.packages.find]
+where = ["."]

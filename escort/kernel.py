@@ -127,7 +127,7 @@ class ImprovedRBFKernel:
             # & Initialize distance matrix for x vs y
             try:
                 dists = cdist(x, y, 'sqeuclidean')
-            except:
+            except Exception:
                 if self.use_numba:
                     # & Use JIT-compiled version for speed
                     dists = compute_squared_distances_numba(x, y)
@@ -274,8 +274,7 @@ class ImprovedRBFKernel:
         
         # & Get dimensions
         n, d = x.shape  # & n particles, d dimensions
-        m = y.shape[0]  # & m reference points
-        
+
         # & Initialize gradient tensor
         # & grad_K[i,j,k] = derivative of K(x_i, y_j) w.r.t. x_i[k]
         
