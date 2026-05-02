@@ -1,3 +1,7 @@
-# & Virtual Environment
+# Ruff Check
+.ruff_cache/
+
+
+# Virtual Environment
 escort_venv/
 escort.egg-info/
